@@ -16,7 +16,7 @@ source ./env/bin/activate
 
 ### Windows
 
-.\Scripts\activate
+.\env\Scripts\activate
 
 ### Desactivarlo
 
