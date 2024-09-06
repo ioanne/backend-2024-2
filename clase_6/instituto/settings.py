@@ -39,6 +39,15 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 
+LOCAL_APPS = [
+    "apps.alumno",
+    "apps.cursada",
+    "apps.profesor",
+    "apps.materia",
+    "apps.usuario",
+    "apps.carrera",
+]
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
