@@ -1,3 +1,9 @@
 from django.contrib import admin
 
-# Register your models here.
+from apps.cursada.models import Cursada
+
+
+@admin.register(Cursada)
+class CursadaAdmin(admin.ModelAdmin):
+    list_display = ('id',)
+    search_fields = ('id',)

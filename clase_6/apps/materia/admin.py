@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from apps.materia.models import Materia
+
+
+@admin.register(Materia)
+class MateriaAdmin(admin.ModelAdmin):
+    search_fields = ('nombre',)
