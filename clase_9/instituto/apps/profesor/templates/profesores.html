@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block content %}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Profesores</h5>
+                <div class="table-responsive">
+                    <table class="table text-nowrap align-middle mb-0">
+                        <thead>
+                            <tr class="border-2 border-bottom border-primary border-0">
+                                <th scope="col" class="ps-0">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">Edad</th>
+                                <th scope="col">DNI</th>
+                                <th scope="col">Telefono</th>
+                                <th scope="col">Email</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            {% for profesor in profesores %}
+                            <tr>
+                                <th scope="row" class="ps-0 fw-medium">
+                                    <span class="table-link1 text-truncate d-block">{{profesor.nombre}}</span>
+                                </th>
+                                <td>
+                                    <span class="table-link1 text-truncate d-block">{{profesor.apellido}}</span>
+                                </td>
+                                <td>
+                                    <span class="table-link1 text-truncate d-block">{{profesor.edad}}</span>
+                                </td>
+                                <td>
+                                    <span class="table-link1 text-truncate d-block">{{profesor.dni}}</span>
+                                </td>
+                                <td>
+                                    <span class="table-link1 text-truncate d-block">{{profesor.telefono}}</span>
+                                </td>
+                                <td>
+                                    <span class="table-link1 text-truncate d-block">{{profesor.email}}</span>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

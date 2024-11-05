@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Carrera</title>
+    </head>
+    <body>
+        <h3>Las carreras de ingenieria son:</h3>
+        {% for carrera in carreras_de_ingenieria %}
+        <h1>{{ carrera.nombre }}</h1>
+        <p>{{ carrera.descripcion }}</p>
+        <p>{{ carrera.duracion }}</p>
+        <p>{{ carrera.costo }}</p>
+        {% endfor %}
+    </body>
+</html>

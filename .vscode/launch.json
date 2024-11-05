@@ -5,13 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Depurador de Python: Archivo actual",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
             "name": "Depurador de Python: Django",
             "type": "debugpy",
             "request": "launch",
             "args": ["runserver"],
             "django": true,
             "autoStartBrowser": false,
-            "program": "${workspaceFolder}/clase_1/superheroes/manage.py"
+            "program": "${workspaceFolder}/clase_8/manage.py"
         }
     ]
 }
