@@ -1,7 +1,9 @@
 from typing import Any
-from django.views.generic import TemplateView
+from django.urls import reverse, reverse_lazy
+from django.views.generic import TemplateView, CreateView
 
 from apps.profesor.models import Profesor
+from apps.profesor.forms import ProfesorForm
 
 
 class ProfesorTemplateView(TemplateView):
@@ -11,3 +13,10 @@ class ProfesorTemplateView(TemplateView):
         context = super().get_context_data(**kwargs)
         context['profesores'] = Profesor.objects.all()
         return context
+
+
+class AltaProfesorCreateView(CreateView):
+    model = Profesor
+    form_class = ProfesorForm
+    template_name = 'alta_profesor.html'
+    success_url = reverse_lazy('profesor')

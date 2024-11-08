@@ -41,11 +41,19 @@
                                 <span class="hide-menu">Home</span>
                             </li>
                             <li class="sidebar-item">
-                                <a class="sidebar-link" href="#" aria-expanded="false">
+                                <a class="sidebar-link" href="{% url 'profesor' %}" aria-expanded="false">
                                     <span>
                                         <iconify-icon icon="solar:home-smile-bold-duotone" class="fs-6"></iconify-icon>
                                     </span>
                                     <span class="hide-menu">Profesores</span>
+                                </a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a class="sidebar-link" href="{% url 'alta_profesor' %}" aria-expanded="false">
+                                    <span>
+                                        <iconify-icon icon="solar:home-smile-bold-duotone" class="fs-6"></iconify-icon>
+                                    </span>
+                                    <span class="hide-menu">Alta profesores</span>
                                 </a>
                             </li>
                         </ul>
